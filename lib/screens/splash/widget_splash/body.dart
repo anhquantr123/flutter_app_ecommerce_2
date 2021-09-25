@@ -18,11 +18,11 @@ class _BodyState extends State<Body> {
     List<Map<String, String>> splashData = [
       {
         "text": "Chào mừng bạn đến với Fast Food",
-        "image": "assets/images/anh1.jpg"
+        "image": "assets/images/anh3.jpg"
       },
       {
         "text": "Món ngon thượng hạng\nCảm nhận trên từng cảm xúc!",
-        "image": "assets/images/anh3.jpg"
+        "image": "assets/images/anh1.jpg"
       },
       {"text": "Thực phẩm luôn tươi ngon", "image": "assets/images/anh2.jpg"}
     ];
@@ -55,7 +55,23 @@ class _BodyState extends State<Body> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                       splashData.length, (index) => buildDot(index: index)),
-                )
+                ),
+                const Spacer(),
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: primaryColor),
+                  child: InkWell(
+                      onTap: () {},
+                      child: const Text("Tiếp tục",
+                          style: TextStyle(
+                              color: textColorWhite, fontSize: textSizeBody3),
+                          textAlign: TextAlign.center)),
+                ),
+                const Spacer()
               ],
             ))
           ],
