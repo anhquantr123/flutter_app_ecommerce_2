@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_ecommerce_2/screens/constants/screen_export.dart';
+import 'package:flutter_app_ecommerce_2/constants/screen_export.dart';
 
 void main() {
   runApp(const MyApp());

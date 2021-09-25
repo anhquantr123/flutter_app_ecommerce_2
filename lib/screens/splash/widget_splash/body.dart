@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_ecommerce_2/screens/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/constants/screen_export.dart';
 import 'package:flutter_app_ecommerce_2/screens/splash/widget_splash/widget_splash.dart';
 
 class Body extends StatefulWidget {
@@ -65,7 +66,12 @@ class _BodyState extends State<Body> {
                       borderRadius: BorderRadius.circular(15),
                       color: primaryColor),
                   child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignInScreen()));
+                      },
                       child: const Text("Tiếp tục",
                           style: TextStyle(
                               color: textColorWhite, fontSize: textSizeBody3),

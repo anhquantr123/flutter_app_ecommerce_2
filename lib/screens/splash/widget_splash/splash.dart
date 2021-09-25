@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_ecommerce_2/screens/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
 
 class SplashImage extends StatelessWidget {
   final String image, text;
