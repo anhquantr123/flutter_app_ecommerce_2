@@ -21,6 +21,7 @@ const textSizeBody1 = 20.0;
 const textSizeBody2 = 18.0;
 const textSizeBody3 = 16.0;
 const textSizeBody4 = 14.0;
+const textSizeBody5 = 12.0;
 
 const fontBold = FontWeight.bold;
 const fontNormal = FontWeight.normal;
