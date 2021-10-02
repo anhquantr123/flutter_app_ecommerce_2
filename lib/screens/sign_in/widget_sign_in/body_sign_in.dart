@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/constants/screen_export.dart';
 import 'package:flutter_app_ecommerce_2/constants/widget_export.dart';
 
 class Body extends StatefulWidget {
@@ -10,6 +11,7 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  bool _checkBox = false;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -47,10 +49,41 @@ class _BodyState extends State<Body> {
                   color: blackColor,
                 ),
                 valueChange: (value) => {print(value)}),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(
+                children: [
+                  Checkbox(
+                      value: _checkBox,
+                      onChanged: (value) => setState(() {
+                            _checkBox = value!;
+                          })),
+                  Text("Giữ trạng thái đăng nhập")
+                ],
+              ),
+            ),
             RoundButton(
                 text: "Continue",
                 width: size.width * 0.6,
                 ontap: () => {print("you are click ")}),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Bạn chưa có tài khoản?"),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignUpScreen()));
+                  },
+                  child: const Text(
+                    " Đăng kí.",
+                    style: TextStyle(color: primaryColor, fontWeight: fontBold),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
