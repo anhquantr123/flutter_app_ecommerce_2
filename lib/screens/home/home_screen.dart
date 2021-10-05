@@ -10,11 +10,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         body: SingleChildScrollView(
-      child: Center(
-        child: Text("hello anh quan")
-      ),
+      child: Center(child: Text("hello anh quan")),
     ));
   }
 }

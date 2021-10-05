@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/constants/screen_export.dart';
 import 'package:flutter_app_ecommerce_2/constants/widget_export.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -57,7 +58,12 @@ class SignUpScreen extends StatelessWidget {
                 child: RoundButton(
                     text: "Continue",
                     width: size.width * 0.6,
-                    ontap: () => {print("you are click ")}),
+                    ontap: () => {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => OTPScreen()))
+                        }),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
