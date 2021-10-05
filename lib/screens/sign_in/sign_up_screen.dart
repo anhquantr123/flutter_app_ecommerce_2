@@ -52,10 +52,13 @@ class SignUpScreen extends StatelessWidget {
                     color: blackColor,
                   ),
                   valueChange: (value) => {print(value)}),
-              RoundButton(
-                  text: "Continue",
-                  width: size.width * 0.6,
-                  ontap: () => {print("you are click ")}),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 15),
+                child: RoundButton(
+                    text: "Continue",
+                    width: size.width * 0.6,
+                    ontap: () => {print("you are click ")}),
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

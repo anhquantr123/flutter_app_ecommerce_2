@@ -21,12 +21,12 @@ class _BodyState extends State<Body> {
           children: <Widget>[
             const SizedBox(height: 20),
             const Text(
-              "Welcome ",
+              "Đăng Nhập",
               style:
                   TextStyle(fontSize: textSizeHeading4, fontWeight: fontBold),
             ),
             Text(
-              "Sign in with your email and password ",
+              "Sử dụng email và mật khẩu của bạn để tiếp tục",
               style: TextStyle(
                   fontSize: textSizeBody5,
                   color: textColorBlack.withOpacity(0.6)),
@@ -62,10 +62,29 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            RoundButton(
-                text: "Continue",
-                width: size.width * 0.6,
-                ontap: () => {print("you are click ")}),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: RoundButton(
+                  text: "Tiếp tục",
+                  width: size.width * 0.6,
+                  ontap: () => {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeScreen()))
+                      }),
+            ),
+            Padding(
+                padding: const EdgeInsets.only(top: 0, bottom: 20),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ForgotPassword()));
+                  },
+                  child: const Text("Quên mật khẩu?"),
+                )),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
