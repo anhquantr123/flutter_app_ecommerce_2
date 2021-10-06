@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/screens/sign_in/sign_in_screen.dart';
+import 'package:flutter_app_ecommerce_2/widgets/round_button.dart';
 
 class OTPScreen extends StatefulWidget {
   OTPScreen({Key? key}) : super(key: key);
@@ -68,6 +70,11 @@ class _OTPScreenState extends State<OTPScreen> {
               const Text("Nhập mã xác thực",
                   style: TextStyle(
                       fontSize: textSizeHeading4, fontWeight: fontBold)),
+              const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: Text(
+                      "Chúng tôi vừa gửi một mã xác nhận đến gmail của bạn đã đăng kí",
+                      textAlign: TextAlign.center)),
               Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
@@ -113,7 +120,29 @@ class _OTPScreenState extends State<OTPScreen> {
                     ),
                   ],
                 ),
-              )
+              ),
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text("Bạn chưa nhận được mã? "),
+                      Text(
+                        "Gửi lại ",
+                        style: TextStyle(color: primaryColor),
+                      )
+                    ],
+                  )),
+              const SizedBox(height: 20),
+              RoundButton(
+                  text: "Xác Nhận",
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  ontap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignInScreen()));
+                  })
             ],
           ))),
         ));

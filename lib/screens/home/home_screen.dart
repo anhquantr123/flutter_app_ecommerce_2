@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
         body: SingleChildScrollView(
-      child: Center(child: Text("hello anh quan")),
+      child: SafeArea(child: Center(child: Text("hello anh quan"))),
     ));
   }
 }
