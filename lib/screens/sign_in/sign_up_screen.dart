@@ -74,7 +74,7 @@ class SignUpScreen extends StatelessWidget {
                       Navigator.pop(context);
                     },
                     child: const Text(
-                      " Đăng Nhập taif khoan ",
+                      " Đăng Nhập",
                       style:
                           TextStyle(color: primaryColor, fontWeight: fontBold),
                     ),
