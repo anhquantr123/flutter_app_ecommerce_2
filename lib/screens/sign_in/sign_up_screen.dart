@@ -68,7 +68,7 @@ class SignUpScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Bạn Đã có tài khoản?"),
+                  const Text(" Đã có tài khoản?"),
                   InkWell(
                     onTap: () {
                       Navigator.pop(context);
