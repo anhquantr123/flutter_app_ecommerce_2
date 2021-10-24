@@ -4,7 +4,7 @@ import 'package:flutter_app_ecommerce_2/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter_app_ecommerce_2/widgets/round_button.dart';
 
 class OTPScreen extends StatefulWidget {
-  OTPScreen({Key? key}) : super(key: key);
+  const OTPScreen({Key? key}) : super(key: key);
 
   @override
   _OTPScreenState createState() => _OTPScreenState();
@@ -20,7 +20,6 @@ class _OTPScreenState extends State<OTPScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     pin1 = FocusNode();
     pin2 = FocusNode();
@@ -32,7 +31,6 @@ class _OTPScreenState extends State<OTPScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     pin1 = FocusNode();
     pin2 = FocusNode();
@@ -45,6 +43,7 @@ class _OTPScreenState extends State<OTPScreen> {
   void nextInputPin(String value, FocusNode focusNode) {
     if (value.length == 1) {
       focusNode.requestFocus();
+      // ignore: avoid_print
       print(value);
     }
   }
