@@ -122,7 +122,8 @@ class _OTPScreenState extends State<OTPScreen> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
