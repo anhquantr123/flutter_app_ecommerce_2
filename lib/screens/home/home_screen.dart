@@ -22,39 +22,19 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(
             height: 10,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 10,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: size.width * 0.6,
-                  height: 40,
-                  decoration: BoxDecoration(
-                      color: blackColor.withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(15)),
-                  child: const TextField(
-                      decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.search_rounded),
-                          border: InputBorder.none,
-                          hintText: "Tìm kiếm...")),
-                ),
-                RoundButtonIcon(
-                    size: size,
-                    numberOfItem: 5,
-                    icon: const Icon(Icons.shopping_cart_rounded),
-                    press: () {}),
-                RoundButtonIcon(
-                  size: size,
-                  icon: const Icon(Icons.notifications),
-                  press: () {},
-                  numberOfItem: 5,
-                )
-              ],
-            ),
-          )
+          HomeHeader(size: size),
+          Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              width: double.infinity,
+              height: 90,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: const Color(0xFF4A3298)),
+              child: RichText(
+                text: const TextSpan(
+                    children: [TextSpan(text: "khuyến mãi đặc biệt mùa hè")]),
+              ))
         ],
       ))),
     );

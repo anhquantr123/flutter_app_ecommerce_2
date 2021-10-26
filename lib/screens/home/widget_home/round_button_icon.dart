@@ -29,27 +29,28 @@ class RoundButtonIcon extends StatelessWidget {
                 color: blackColor.withOpacity(0.2), shape: BoxShape.circle),
             child: icon,
           ),
-          Positioned(
-            right: 0,
-            child: Container(
-                height: 15,
-                width: 15,
-                decoration: BoxDecoration(
-                    border: Border.all(
-                      color: whiteColor,
-                      width: 1,
-                    ),
-                    color: Colors.red,
-                    shape: BoxShape.circle),
-                child: Center(
-                  child: Text("$numberOfItem",
-                      style: TextStyle(
-                          color: whiteColor,
-                          height: 1,
-                          fontWeight: FontWeight.bold,
-                          fontSize: size.width / 35)),
-                )),
-          )
+          if (numberOfItem > 0)
+            Positioned(
+              right: 0,
+              child: Container(
+                  height: 15,
+                  width: 15,
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        color: whiteColor,
+                        width: 1,
+                      ),
+                      color: Colors.red,
+                      shape: BoxShape.circle),
+                  child: Center(
+                    child: Text("$numberOfItem",
+                        style: TextStyle(
+                            color: whiteColor,
+                            height: 1,
+                            fontWeight: FontWeight.bold,
+                            fontSize: size.width / 35)),
+                  )),
+            )
         ],
       ),
     );
