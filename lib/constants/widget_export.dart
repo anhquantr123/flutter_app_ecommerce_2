@@ -5,3 +5,5 @@ export '../screens/home/widget_home/search_field.dart';
 export '../screens/home/widget_home/home_header.dart';
 export '../screens/home/widget_home/discount_banner.dart';
 export '../screens/home/widget_home/categories.dart';
+export '../screens/home/widget_home/special_offer_card.dart';
+export '../widgets/section_title.dart';

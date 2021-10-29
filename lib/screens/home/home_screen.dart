@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
+
 import 'package:flutter_app_ecommerce_2/constants/widget_export.dart';
-import 'package:shake/shake.dart';
 
 class HomeScreen extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables
@@ -38,19 +38,31 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 10,
           ),
           const Categories(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+          SectionTitle(
+            text: "Sản Phẩm Đặt Nhiều",
+            press: () {},
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Text("Sản phẩm đặt nhiều",
-                    style: TextStyle(
-                        fontSize: textSizeBody3, fontWeight: fontBold)),
-                Text("Xem thêm")
+              children: [
+                SpecialOfferCard(
+                  textTitle: "Pizaa Hải Sản",
+                  size: size,
+                  image: "assets/images/anh1.jpg",
+                  textBody: "Giảm giá 50% mỗi thứ 4 hàng tuần",
+                  press: () {},
+                ),
+                SpecialOfferCard(
+                  textTitle: "Hamburger bò ",
+                  size: size,
+                  image: "assets/images/hamburger.jpg",
+                  textBody: "Tặng 1 suất nước ngọt miễn phí",
+                  press: () {},
+                ),
               ],
             ),
-          )
+          ),
         ],
       ))),
     );
