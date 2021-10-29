@@ -34,7 +34,23 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 10,
           ),
           const DiscountBanner(),
-          Categories()
+          const SizedBox(
+            height: 10,
+          ),
+          const Categories(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text("Sản phẩm đặt nhiều",
+                    style: TextStyle(
+                        fontSize: textSizeBody3, fontWeight: fontBold)),
+                Text("Xem thêm")
+              ],
+            ),
+          )
         ],
       ))),
     );

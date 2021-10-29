@@ -11,6 +11,7 @@ const gradientColor = LinearGradient(
 
 const textColorBlack = Color(0xFF000000);
 const textColorWhite = Color(0xFFFFFFFF);
+const categoriesColor = Color(0xFFBF8339);
 
 const textSizeHeading1 = 36.0;
 const textSizeHeading2 = 32.0;
