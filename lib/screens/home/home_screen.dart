@@ -63,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+          SectionTitle(text: "Món ngon hôm nay ", press: () {})
         ],
       ))),
     );
