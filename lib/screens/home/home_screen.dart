@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
 
 import 'package:flutter_app_ecommerce_2/constants/widget_export.dart';
+import 'package:flutter_app_ecommerce_2/model/product_food.dart';
 
 class HomeScreen extends StatefulWidget {
   // ignore: prefer_const_constructors_in_immutables
@@ -63,7 +64,46 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          SectionTitle(text: "Món ngon hôm nay ", press: () {})
+          SectionTitle(text: "Món ngon hôm nay ", press: () {}),
+          SizedBox(
+            width: 140,
+            child: Column(
+              children: [
+                AspectRatio(
+                  aspectRatio: 1.02,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: blackColor.withOpacity(0.1),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        listProducts[0].image[0].toString(),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  child: Text(
+                    listProducts[0].title,
+                    maxLines: 2,
+                    style: const TextStyle(color: textColorBlack, fontSize: 20),
+                  ),
+                ),
+                Text(
+                  "${listProducts[0].price.toString()} VNĐ",
+                  maxLines: 2,
+                  style: const TextStyle(
+                    color: primaryColor,
+                    fontWeight: fontBold,
+                    fontSize: textSizeBody2,
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ))),
     );

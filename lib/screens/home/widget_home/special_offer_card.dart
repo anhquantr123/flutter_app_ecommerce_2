@@ -18,12 +18,12 @@ class SpecialOfferCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.only(left: 20),
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
           height: 150,
-          width: (size.width / 3) * 2,
+          width: 220,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(15),
             child: Stack(children: [
