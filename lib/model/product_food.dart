@@ -22,11 +22,31 @@ class Product {
 
 List<Product> listProducts = [
   Product(
-    image: ["assets/images/pho1.jpg", "assets/images/pho2.jpg"],
+    image: ["assets/images/pho1.jpg"],
     colors: [const Color(0xFFF6625E), const Color(0xFF936D88), Colors.white],
     title: "Phở Gà Hà Nội",
     description: "Phở ngon hà nội trứ danh gia truyền",
     price: 45000,
+    rating: 4.5,
+    isFavourite: true,
+    isPopular: true,
+  ),
+  Product(
+    image: ["assets/images/pho2.jpg"],
+    colors: [const Color(0xFFF6625E), const Color(0xFF936D88), Colors.white],
+    title: "Phở Bò Hà Nội",
+    description: "Phở ngon hà nội trứ danh gia truyền",
+    price: 75000,
+    rating: 4.5,
+    isFavourite: true,
+    isPopular: true,
+  ),
+  Product(
+    image: ["assets/images/mon1.jpg"],
+    colors: [const Color(0xFFF6625E), const Color(0xFF936D88), Colors.white],
+    title: "Bit tết bò",
+    description: "Phở ngon hà nội trứ danh gia truyền",
+    price: 129000,
     rating: 4.5,
     isFavourite: true,
     isPopular: true,
