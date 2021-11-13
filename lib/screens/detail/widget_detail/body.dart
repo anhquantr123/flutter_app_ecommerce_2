@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_ecommerce_2/constants/constants_style.dart';
+import 'package:flutter_app_ecommerce_2/screens/detail/widget_detail/product_image.dart';
+import 'package:flutter_app_ecommerce_2/screens/detail/widget_detail/top_round_container.dart';
 
 class BodyDetailScreen extends StatefulWidget {
   final dynamic product;
@@ -14,37 +16,26 @@ class _BodyDetailScreenState extends State<BodyDetailScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return SizedBox(
-      child: Column(children: [
-        Center(
-          child: SizedBox(
-            height: size.width * 0.8,
-            child: AspectRatio(
-              aspectRatio: 1,
-              child: Image.asset(
-                widget.product.image[0].toString(),
-                fit: BoxFit.cover,
+      child: Column(
+        children: [
+          ProductImage(size: size, product: widget.product),
+          const SizedBox(height: 10),
+          TopRoundContainer(
+            color: whiteColor,
+            widget: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.product.title,
+                  )
+                ],
               ),
             ),
-          ),
-        ),
-        const SizedBox(height: 10),
-        ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: Container(
-            height: 50,
-            width: 50,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(color: primaryColor, width: 2),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Image.asset(
-              widget.product.image[0].toString(),
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-      ]),
+          )
+        ],
+      ),
     );
   }
 }

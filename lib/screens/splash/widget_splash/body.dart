@@ -65,7 +65,7 @@ class _BodyState extends State<Body> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       color: primaryColor),
-                  child: InkWell(
+                  child: GestureDetector(
                       onTap: () {
                         Navigator.pushReplacement(
                             context,
