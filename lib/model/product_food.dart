@@ -22,12 +22,12 @@ class Product {
 
 List<Product> listProducts = [
   Product(
-    image: ["assets/images/pho1.jpg"],
+    image: ["assets/images/pho1.jpg", 'asset/images/phoga2.jpg'],
     colors: [const Color(0xFFF6625E), const Color(0xFF936D88), Colors.white],
     title: "Phở Gà Hà Nội",
     description: "Phở ngon hà nội trứ danh gia truyền",
     price: 45000,
-    rating: 4.5,
+    rating: 4.3,
     isFavourite: true,
     isPopular: true,
   ),
@@ -47,7 +47,7 @@ List<Product> listProducts = [
     title: "Bit tết bò",
     description: "Phở ngon hà nội trứ danh gia truyền",
     price: 129000,
-    rating: 4.5,
+    rating: 4.0,
     isFavourite: true,
     isPopular: true,
   ),

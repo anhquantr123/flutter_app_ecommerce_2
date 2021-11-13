@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 // export style use our app
 const primaryColor = Color(0xFFF58A5F);
+const colorRating = Color(0xFFFFbb00);
 const whiteColor = Color(0xFFFFFFFF);
 const blackColor = Color(0xFF000000);
 const gradientColor = LinearGradient(

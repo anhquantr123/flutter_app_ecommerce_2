@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => DetailScreen(
-                                          product: listProducts,
+                                          product: listProducts[index],
                                         )));
                           },
                         )),
