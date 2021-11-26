@@ -69,7 +69,7 @@ class _ProductImageState extends State<ProductImage> {
           borderRadius: BorderRadius.circular(14),
           child: Image.asset(
             widget.product.image[index].toString(),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
       ),
